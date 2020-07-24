@@ -12,10 +12,9 @@
 </head>
 
 <body>
-
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">frutas & fruto</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand fonte-titulo cor-especial" href="#">frutas & fruto</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -25,7 +24,7 @@
           <li><a class="nav-item nav-link active" href="#">início <span class="sr-only">(current)</span></a></li>
           <li><a class="nav-item nav-link" href="#">receitas</a></li>
           <li><a class="nav-item nav-link" href="#">quem somos</a></li>
-          <li><a class="nav-item nav-link" href="#">contato</a></li>
+          <li><a class="nav-item nav-link" data-toggle="modal" data-target="#modal-contato" href="#">contato</a></li>
         </ul>
       </div>
     </nav>
@@ -70,7 +69,6 @@
         ganhar tempo e
         praticidade</p>
     </section>
-
     <section class="container-fluid bg-light" id="receitas">
       <div class="row justify-content-center">
         <article class="card borda-cor-especial card-largura p-0 col-12 m-4 col-md-4">
@@ -131,11 +129,52 @@
         </article>
       </div>
     </section>
-
   </main>
 
+  <footer class="bg-secondary p-3">
+    <p class="text-light m-0 text-center">contato: <a class="text-light"
+        href="mailto:email@frutafruto.com.br">email@frutafruto.com.br</a></p>
+  </footer>
 
-  <p>contato:<a href="mailto:email@frutafruto.com.br">email@frutafruto.com.br</a></p>
+  <!-- Modal -->
+  <div class="modal fade" id="modal-contato" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <dialog class="modal-content">
+        <header class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Entre em contato</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </header>
+        <main class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Nome completo</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Insira seu nome completo">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Endereço de E-mail</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@exemplo.com">
+            </div>
+
+
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Deixe seu contato</label>
+              <textarea class="form-control" placeholder="Insira aqui seu comentário" id="exampleFormControlTextarea1"
+                rows="3"></textarea>
+            </div>
+          </form>
+        </main>
+        <footer class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn botao-cor-especial">Enviar</button>
+        </footer>
+      </dialog>
+    </div>
+  </div>
+
+
 
   <script src=""></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
